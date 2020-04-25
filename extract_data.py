@@ -42,5 +42,6 @@ def now_data():
     #This was the div line for the information I was looking for
     title = soup.findAll("div",{"class":"yeRnY sz9i9"})
     #There were several div lines matching the one above. This is the correct one and extracts the numerical data
-    now_num = int((title[5].text).strip().replace(',',''))
+    now_num = int((title[8].text).strip().replace(',',''))
+    print( now_num)
     return [["**COVID-19**", now_num]]
